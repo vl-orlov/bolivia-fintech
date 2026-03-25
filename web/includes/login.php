@@ -57,11 +57,11 @@
                 </div>
 
                 <div class="login_form_links">
-                    <a href="#" class="login_form_link">Registrar nuevo</a>
+                    <a href="index.php?page=regnew" class="login_form_link">Registrar nuevo</a>
                     <a onclick="window.location.href='?page=recover_password_1'" class="login_form_link">Me olvidé la contraseña</a>
                 </div>
 
-                <button type="submit" class="login_form_submit">Iniciar sesión</button>
+                <button type="button" class="login_form_submit" onclick="window.location.href='?page=home'">Iniciar sesión</button>
             </form>
         </div>
     </div>
