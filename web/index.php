@@ -14,6 +14,10 @@
 $page = isset($_REQUEST['page']) ? htmlspecialchars($_REQUEST['page']) : '';
 
 SWITCH ( $page ) {
+    case 'recibos':                            include "includes/recibos.php";                                   break;
+    case 'cambio':                              include "includes/cambio.php";                                    break;
+    case 'pagos':                               include "includes/pagos.php";                                     break;
+    case 'profile':                             include "includes/profile.php";                                   break;
     case 'home':                                include "includes/home.php";                                      break;
     case 'recover_password_2':                  include "includes/recover_password/recover_password2.php";        break;
     case 'recover_password_1':                  include "includes/recover_password/recover_password1.php";        break;

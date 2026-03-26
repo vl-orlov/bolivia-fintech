@@ -669,10 +669,10 @@ body {
 }
 
 .home_balance_card--row2 {
-  grid-column: 1 / -1;
-  width: calc((100% - 12px) / 2);
-  max-width: 100%;
-  justify-self: center;
+  grid-column: 1;
+  width: auto;
+  max-width: none;
+  justify-self: stretch;
 }
 
 .home_tabs {
@@ -859,3 +859,481 @@ body {
   font-weight: 600;
 }
 /* END HOME */
+
+/* PROFILE */
+.profile_page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.profile_strip {
+  flex-shrink: 0;
+  height: 4px;
+  background: #f46a4a;
+}
+
+.profile_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px 12px;
+  box-sizing: border-box;
+}
+
+.profile_header_user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.profile_header_avatar {
+  display: block;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.profile_header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.profile_header_name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1d23;
+  line-height: 1.2;
+}
+
+.profile_header_phone {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.2;
+}
+
+.profile_logout {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.profile_logout:hover {
+  background: rgba(61, 68, 79, 0.06);
+}
+
+.profile_logout:focus-visible {
+  outline: 2px solid #f46a4a;
+  outline-offset: 2px;
+}
+
+.profile_logout_icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.profile_main {
+  flex: 1;
+  padding: 10px 16px 96px;
+  box-sizing: border-box;
+}
+
+.profile_section_title {
+  margin: 10px 0 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.profile_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile_field_row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.profile_label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.profile_input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #3d444f;
+  background: #f3f4f7;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+
+.profile_input:focus {
+  box-shadow: 0 0 0 2px rgba(244, 106, 74, 0.35);
+}
+
+.profile_checks {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile_check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #2d3139;
+}
+
+.profile_checkbox {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  border: 2px solid #2d3139;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.profile_checkbox::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #f46a4a;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: transform 0.12s ease;
+}
+
+.profile_checkbox:checked::after {
+  transform: scale(1);
+}
+
+.profile_checkbox:focus-visible {
+  outline: 2px solid #f46a4a;
+  outline-offset: 2px;
+}
+
+.profile_save_btn {
+  margin-top: 12px;
+  margin-bottom: 96px;
+}
+/* END PROFILE */
+
+/* CAMBIO */
+.cambio_page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.cambio_strip {
+  flex-shrink: 0;
+  height: 4px;
+  background: #f46a4a;
+}
+
+.cambio_main {
+  flex: 1;
+  padding: 20px 16px 96px;
+  box-sizing: border-box;
+}
+
+.cambio_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cambio_group {
+  margin-bottom: 22px;
+}
+
+.cambio_label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.cambio_input_row {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 48px;
+}
+
+.cambio_currency_select_wrap {
+  position: relative;
+  flex-shrink: 0;
+  min-width: 108px;
+}
+
+.cambio_currency_select_wrap::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -2px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #fff;
+  pointer-events: none;
+}
+
+.cambio_currency_btn {
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  padding: 12px 32px 12px 14px;
+  margin: 0;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background: #2a3039;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.cambio_currency_btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(244, 106, 74, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.cambio_amount_wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: #f3f4f7;
+  border-radius: 0 10px 10px 0;
+}
+
+.cambio_amount_input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3139;
+  font-variant-numeric: tabular-nums;
+  outline: none;
+}
+
+.cambio_amount_input::placeholder {
+  color: #9aa0a8;
+}
+
+.cambio_amount_suffix {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.cambio_hint {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.cambio_submit {
+  margin-top: 8px;
+}
+
+.cambio_pick_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(15, 19, 26, 0.08);
+}
+
+.cambio_pick_overlay[hidden] {
+  display: none;
+}
+
+.cambio_pick_sheet {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.cambio_pick_overlay--open .cambio_pick_sheet {
+  transform: translateX(0);
+}
+
+.cambio_pick_head {
+  flex-shrink: 0;
+  padding: 12px 16px 0;
+  box-sizing: border-box;
+}
+
+.cambio_pick_title_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cambio_pick_back {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: #2d3139;
+  cursor: pointer;
+}
+
+.cambio_pick_back:hover {
+  background: rgba(61, 68, 79, 0.06);
+}
+
+.cambio_pick_back:focus-visible {
+  outline: 2px solid #f46a4a;
+  outline-offset: 2px;
+}
+
+.cambio_pick_title {
+  margin: 0;
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.cambio_pick_rule {
+  height: 4px;
+  margin: 0 -16px;
+  background: #f46a4a;
+}
+
+.cambio_pick_userbar {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.cambio_pick_body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 16px 12px;
+  box-sizing: border-box;
+}
+
+.cambio_pick_subtitle {
+  margin: 8px 0 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.cambio_pick_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cambio_pick_list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.cambio_pick_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid #f0f1f4;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.cambio_pick_list > li:last-child .cambio_pick_item {
+  border-bottom: none;
+}
+
+.cambio_pick_item:hover {
+  background: rgba(61, 68, 79, 0.03);
+}
+
+.cambio_pick_item:focus-visible {
+  outline: 2px solid #f46a4a;
+  outline-offset: -2px;
+}
+
+.cambio_pick_sheet .home_bottom_nav {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+.cambio_pick_bottom_nav {
+  flex-shrink: 0;
+}
+/* END CAMBIO */

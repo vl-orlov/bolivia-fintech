@@ -26,8 +26,8 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                     aria-label="Mostrar u ocultar saldos"
                     aria-pressed="false"
                 >
-                    <img src="img/icons/eye_icon.png" alt="" class="home_balance_eye_icon home_balance_eye_icon--open" width="22" height="22">
-                    <img src="img/icons/eye_clossed_icon.png" alt="" class="home_balance_eye_icon home_balance_eye_icon--closed" width="22" height="22" hidden>
+                    <img src="img/icons/eye_icon.svg" alt="" class="home_balance_eye_icon home_balance_eye_icon--open" width="22" height="22">
+                    <img src="img/icons/eye_clossed_icon.svg" alt="" class="home_balance_eye_icon home_balance_eye_icon--closed" width="22" height="22" hidden>
                 </button>
             </div>
 
@@ -132,25 +132,25 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                 </span>
                 <span class="home_nav_label">Saldo</span>
             </a>
-            <a href="#" class="home_nav_link">
+            <a onclick="window.location.href='index.php?page=pagos'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/Pagos.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Pagos</span>
             </a>
-            <a href="#" class="home_nav_link">
+            <a onclick="window.location.href='index.php?page=cambio'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="<?php echo htmlspecialchars($cambio_icon_src, ENT_QUOTES, 'UTF-8'); ?>" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Cambio</span>
             </a>
-            <a href="#" class="home_nav_link">
+            <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/Recibos.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Recibos</span>
             </a>
-            <a href="#" class="home_nav_link">
+            <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/user.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>

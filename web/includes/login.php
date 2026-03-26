@@ -38,14 +38,14 @@
                             aria-pressed="false"
                         >
                             <img
-                                src="img/icons/eye_clossed_icon.png"
+                                src="img/icons/eye_clossed_icon.svg"
                                 alt=""
                                 class="login_form_toggle_icon login_form_toggle_icon_hidden"
                                 width="22"
                                 height="22"
                             >
                             <img
-                                src="img/icons/eye_icon.png"
+                                src="img/icons/eye_icon.svg"
                                 alt=""
                                 class="login_form_toggle_icon login_form_toggle_icon_visible"
                                 width="22"
