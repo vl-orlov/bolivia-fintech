@@ -132,17 +132,11 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
         id="cambio-currency-panel"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="cambio-pick-title"
+        aria-label="Seleccione la moneda y la cuenta"
         hidden
     >
         <div class="cambio_pick_sheet">
-            <div class="cambio_pick_head app_content_column">
-                <div class="cambio_pick_title_row">
-                    <button type="button" class="cambio_pick_back" id="cambio-pick-close" aria-label="Cerrar">&larr;</button>
-                    <h2 class="cambio_pick_title" id="cambio-pick-title">Selección de moneda</h2>
-                </div>
-                <div class="cambio_pick_rule" aria-hidden="true"></div>
-            </div>
+            <div class="cambio_pick_rule" aria-hidden="true"></div>
 
             <header class="home_header app_content_column cambio_pick_userbar">
                 <div class="home_header_user">
@@ -262,7 +256,6 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
     var sheet = overlay ? overlay.querySelector('.cambio_pick_sheet') : null;
     var givePicker = document.getElementById('cambio-give-picker');
     var recvPicker = document.getElementById('cambio-receive-picker');
-    var closeBtn = document.getElementById('cambio-pick-close');
     if (!overlay || !sheet || !givePicker || !recvPicker) return;
 
     var activeTarget = null;
@@ -323,8 +316,6 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
     recvPicker.addEventListener('click', function () {
         openPanel('receive');
     });
-
-    closeBtn.addEventListener('click', closePanel);
 
     document.querySelectorAll('.cambio_pick_item').forEach(function (btn) {
         btn.addEventListener('click', function () {
