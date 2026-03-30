@@ -49,16 +49,7 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                 </div>
                 <input type="hidden" name="salary_currency" id="pagos-salary-currency" value="USD">
                 <input type="hidden" name="salary_account" id="pagos-salary-account" value="PayPal">
-                <div class="cambio_input_row pagos_qr_btn_row">
-                    <div class="cambio_currency_select_wrap" aria-hidden="true">
-                        <button type="button" class="cambio_currency_btn pagos_qr_btn_currency_mirror" tabindex="-1" disabled>
-                            <span class="cambio_currency_btn_code" id="pagos-qr-row-currency-mirror">USD</span>
-                        </button>
-                    </div>
-                    <div class="cambio_amount_wrap pagos_qr_btn_wrap">
-                        <button type="button" class="login_form_submit pagos_qr_btn" id="pagos-generate-qr">Generar código QR</button>
-                    </div>
-                </div>
+                <button type="button" class="login_form_submit pagos_qr_btn" id="pagos-generate-qr">Generar código QR</button>
 
                 <div class="pagos_qr_panel" id="pagos-qr-panel" hidden>
                     <div class="pagos_qr_frame">
@@ -363,8 +354,6 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
             if (accEl) accEl.value = acc || '';
             document.getElementById('pagos-currency-code').textContent = cur;
             document.getElementById('pagos-salary-suffix').textContent = cur;
-            var mirror = document.getElementById('pagos-qr-row-currency-mirror');
-            if (mirror) mirror.textContent = cur;
             closePanel();
         });
     });
