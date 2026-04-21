@@ -23,9 +23,12 @@ SWITCH ( $page ) {
     case 'recover_password_1':                  include "includes/recover_password/recover_password1.php";        break;
     case 'regnew':                              include "includes/regnew.php";                                    break;
     case 'login':                               include "includes/login.php";                                     break;
+    case 'two_factor':                          include "includes/two_factor.php";                                break;
+    case 'transferencias':                      include "includes/transferencias.php";                             break;
     default:                                    include "includes/login.php";                                     break;
 }
 ?>
 
+<script defer src="js/nav_mas.js"></script>
 </body>
 </html>

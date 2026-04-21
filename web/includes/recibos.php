@@ -160,18 +160,13 @@ $recibo_detail = ($recibo_param !== '' && isset($recibos_items[$recibo_param])) 
                 </span>
                 <span class="home_nav_label">Cambio</span>
             </a>
-            <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link home_nav_link--active" aria-current="page">
-                <span class="home_nav_icon_wrap">
-                    <img src="img/icons/Recibos_active.svg" alt="" class="home_nav_icon" width="26" height="26">
-                </span>
-                <span class="home_nav_label">Recibos</span>
-            </a>
             <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/user.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Datos</span>
             </a>
+            <?php $nav_mas_active = true; include __DIR__ . '/partials/home_nav_mas.php'; ?>
         </div>
     </nav>
 </div>

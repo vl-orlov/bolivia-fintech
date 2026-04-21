@@ -1,5 +1,7 @@
 <?php
 $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
+// Backend: set true when the user has completed two-factor authentication.
+$profile_two_factor_enabled = false;
 ?>
 <div class="profile_page">
     <div class="profile_strip" aria-hidden="true"></div>
@@ -47,13 +49,26 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
             </div>
 
             <div class="profile_checks">
-                <label class="profile_check">
-                    <input type="checkbox" class="profile_checkbox" name="two_factor">
-                    <span>Identificación de dos factores</span>
-                </label>
-                <label class="profile_check">
-                    <input type="checkbox" class="profile_checkbox" name="dark_theme">
-                    <span>Tema oscuro</span>
+                <div class="profile_checks_row profile_checks_row--2fa">
+                    <span class="profile_2fa_title">Identificación de dos factores</span>
+                    <a
+                        href="index.php?page=two_factor"
+                        class="profile_2fa_btn"
+                        id="profile-2fa-btn"
+                    ><?php echo $profile_two_factor_enabled ? 'Editar' : 'Configurar'; ?></a>
+                </div>
+                <label class="profile_checks_row profile_checks_row--theme" for="profile-dark-theme">
+                    <input
+                        type="checkbox"
+                        class="profile_theme_checkbox"
+                        id="profile-dark-theme"
+                        name="dark_theme"
+                        role="switch"
+                    >
+                    <span class="profile_theme_switch" aria-hidden="true">
+                        <span class="profile_theme_knob"></span>
+                    </span>
+                    <span class="profile_theme_text">Tema oscuro</span>
                 </label>
             </div>
 
@@ -82,18 +97,13 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                 </span>
                 <span class="home_nav_label">Cambio</span>
             </a>
-            <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link">
-                <span class="home_nav_icon_wrap">
-                    <img src="img/icons/Recibos.svg" alt="" class="home_nav_icon" width="26" height="26">
-                </span>
-                <span class="home_nav_label">Recibos</span>
-            </a>
             <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link home_nav_link--active" aria-current="page">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/user_active.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Datos</span>
             </a>
+            <?php $nav_mas_active = false; include __DIR__ . '/partials/home_nav_mas.php'; ?>
         </div>
     </nav>
 </div>

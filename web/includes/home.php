@@ -34,18 +34,31 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
             <div class="home_cards_grid">
                 <article class="home_balance_card">
                     <span class="home_balance_card_currency">USD</span>
-                    <span class="home_balance_card_amount js-home-amount" data-value="1.000">1.000</span>
-                    <span class="home_balance_card_rate">USD = USD 1.0</span>
+                    <div class="home_balance_card_values">
+                        <span class="home_balance_card_amount js-home-amount" data-value="1.000">1.000</span>
+                        <span class="home_balance_card_rate">USD = USD 1.0</span>
+                    </div>
                 </article>
                 <article class="home_balance_card">
                     <span class="home_balance_card_currency">ARS</span>
-                    <span class="home_balance_card_amount js-home-amount" data-value="27.000">27.000</span>
-                    <span class="home_balance_card_rate">ARS = USD 0.00070</span>
+                    <div class="home_balance_card_values">
+                        <span class="home_balance_card_amount js-home-amount" data-value="27.000">27.000</span>
+                        <span class="home_balance_card_rate">ARS = USD 0.00070</span>
+                    </div>
                 </article>
-                <article class="home_balance_card home_balance_card--row2">
+                <article class="home_balance_card">
                     <span class="home_balance_card_currency">BOB</span>
-                    <span class="home_balance_card_amount js-home-amount" data-value="3.400">3.400</span>
-                    <span class="home_balance_card_rate">BOB = USD 0.00017</span>
+                    <div class="home_balance_card_values">
+                        <span class="home_balance_card_amount js-home-amount" data-value="3.400">3.400</span>
+                        <span class="home_balance_card_rate">BOB = USD 0.00017</span>
+                    </div>
+                </article>
+                <article class="home_balance_card">
+                    <span class="home_balance_card_currency home_balance_card_currency--sentence">Efectivo disponible</span>
+                    <div class="home_balance_card_values">
+                        <span class="home_balance_card_amount js-home-amount" data-value="20.000">20.000</span>
+                        <span class="home_balance_card_rate">ARS = USD 0.00070</span>
+                    </div>
                 </article>
             </div>
         </section>
@@ -59,26 +72,41 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                 <div class="home_tabpanel" role="tabpanel" id="home-panel-activos" aria-labelledby="home-tab-activos">
                     <ul class="home_asset_list">
                         <li class="home_asset_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/dollar_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <span class="home_asset_code">USD</span>
                             <span class="home_asset_amount js-home-amount" data-value="1.000">1.000</span>
                         </li>
                         <li class="home_asset_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/dollar_latam_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <span class="home_asset_code">ARS</span>
                             <span class="home_asset_amount js-home-amount" data-value="27.000">27.000</span>
                         </li>
                         <li class="home_asset_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/dollar_latam_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <span class="home_asset_code">BOB</span>
                             <span class="home_asset_amount js-home-amount" data-value="3.400">3.400</span>
+                        </li>
+                        <li class="home_asset_row">
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/Efectivo_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
+                            <span class="home_asset_code">Efectivo</span>
+                            <span class="home_asset_amount js-home-amount" data-value="20.000">20.000</span>
                         </li>
                     </ul>
                 </div>
                 <div class="home_tabpanel" role="tabpanel" id="home-panel-cuentas" aria-labelledby="home-tab-cuentas" hidden>
                     <ul class="home_asset_list">
                         <li class="home_account_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/paypal_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">PayPal</span>
                                 <span class="home_account_currency">USD</span>
@@ -86,7 +114,9 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                             <span class="home_asset_amount js-home-amount" data-value="700">700</span>
                         </li>
                         <li class="home_account_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank 1</span>
                                 <span class="home_account_currency">USD</span>
@@ -94,7 +124,9 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                             <span class="home_asset_amount js-home-amount" data-value="300">300</span>
                         </li>
                         <li class="home_account_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank Argentina</span>
                                 <span class="home_account_currency">ARS</span>
@@ -102,7 +134,9 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                             <span class="home_asset_amount js-home-amount" data-value="17.000">17.000</span>
                         </li>
                         <li class="home_account_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Mercado Pago</span>
                                 <span class="home_account_currency">ARS</span>
@@ -110,12 +144,24 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                             <span class="home_asset_amount js-home-amount" data-value="10.000">10.000</span>
                         </li>
                         <li class="home_account_row">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank Bolivia</span>
                                 <span class="home_account_currency">BOB</span>
                             </div>
                             <span class="home_asset_amount js-home-amount" data-value="3.400">3.400</span>
+                        </li>
+                        <li class="home_account_row">
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/Efectivo_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
+                            <div class="home_account_body">
+                                <span class="home_account_name">Efectivo</span>
+                                <span class="home_account_currency">ARS</span>
+                            </div>
+                            <span class="home_asset_amount js-home-amount" data-value="20.000">20.000</span>
                         </li>
                     </ul>
                 </div>
@@ -144,18 +190,13 @@ $cambio_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio.svg';
                 </span>
                 <span class="home_nav_label">Cambio</span>
             </a>
-            <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link">
-                <span class="home_nav_icon_wrap">
-                    <img src="img/icons/Recibos.svg" alt="" class="home_nav_icon" width="26" height="26">
-                </span>
-                <span class="home_nav_label">Recibos</span>
-            </a>
             <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/user.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Datos</span>
             </a>
+            <?php $nav_mas_active = false; include __DIR__ . '/partials/home_nav_mas.php'; ?>
         </div>
     </nav>
 </div>

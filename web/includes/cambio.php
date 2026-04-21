@@ -112,18 +112,13 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                 </span>
                 <span class="home_nav_label">Cambio</span>
             </a>
-            <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link">
-                <span class="home_nav_icon_wrap">
-                    <img src="img/icons/Recibos.svg" alt="" class="home_nav_icon" width="26" height="26">
-                </span>
-                <span class="home_nav_label">Recibos</span>
-            </a>
             <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link">
                 <span class="home_nav_icon_wrap">
                     <img src="img/icons/user.svg" alt="" class="home_nav_icon" width="26" height="26">
                 </span>
                 <span class="home_nav_label">Datos</span>
             </a>
+            <?php $nav_mas_active = false; include __DIR__ . '/partials/home_nav_mas.php'; ?>
         </div>
     </nav>
 
@@ -154,7 +149,9 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                 <ul class="cambio_pick_list">
                     <li>
                         <button type="button" class="cambio_pick_item" data-currency="USD" data-account="PayPal" data-available="Disponible: USD 700" data-amount="700">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/paypal_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">PayPal</span>
                                 <span class="home_account_currency">USD</span>
@@ -164,7 +161,9 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                     </li>
                     <li>
                         <button type="button" class="cambio_pick_item" data-currency="USD" data-account="Bank 1" data-available="Disponible: USD 300" data-amount="300">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank 1</span>
                                 <span class="home_account_currency">USD</span>
@@ -174,7 +173,9 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                     </li>
                     <li>
                         <button type="button" class="cambio_pick_item" data-currency="ARS" data-account="Bank Argentina" data-available="Disponible: ARS 17.000" data-amount="17.000">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank Argentina</span>
                                 <span class="home_account_currency">ARS</span>
@@ -184,7 +185,9 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                     </li>
                     <li>
                         <button type="button" class="cambio_pick_item" data-currency="ARS" data-account="Mercado Pago" data-available="Disponible: ARS 10.000" data-amount="10.000">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Mercado Pago</span>
                                 <span class="home_account_currency">ARS</span>
@@ -194,7 +197,9 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                     </li>
                     <li>
                         <button type="button" class="cambio_pick_item" data-currency="BOB" data-account="Bank Bolivia" data-available="Disponible: BOB 3.400" data-amount="3.400">
-                            <span class="home_asset_dot" aria-hidden="true"></span>
+                            <span class="home_asset_icon_wrap" aria-hidden="true">
+                                <img src="img/icons/bank_icon.png" alt="" class="home_asset_icon" width="36" height="36">
+                            </span>
                             <div class="home_account_body">
                                 <span class="home_account_name">Bank Bolivia</span>
                                 <span class="home_account_currency">BOB</span>
@@ -226,18 +231,13 @@ $cambio_active_icon_src = 'img/icons/' . "\xD0\xA1" . 'ambio_active.svg';
                         </span>
                         <span class="home_nav_label">Cambio</span>
                     </a>
-                    <a onclick="window.location.href='index.php?page=recibos'" class="home_nav_link">
-                        <span class="home_nav_icon_wrap">
-                            <img src="img/icons/Recibos.svg" alt="" class="home_nav_icon" width="26" height="26">
-                        </span>
-                        <span class="home_nav_label">Recibos</span>
-                    </a>
                     <a onclick="window.location.href='index.php?page=profile'" class="home_nav_link">
                         <span class="home_nav_icon_wrap">
                             <img src="img/icons/user.svg" alt="" class="home_nav_icon" width="26" height="26">
                         </span>
                         <span class="home_nav_label">Datos</span>
                     </a>
+                    <?php $nav_mas_active = false; include __DIR__ . '/partials/home_nav_mas.php'; ?>
                 </div>
             </nav>
         </div>
